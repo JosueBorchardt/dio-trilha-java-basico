@@ -1,25 +1,30 @@
-classDiagram
-    class MusicPlayer {
-        +tocar()
-        +pausar()
-        +selecionarMusica(String musica)
-    }
+```mermaid
+    classDiagram
+        class MusicPlayer {
+            <<Interface>>
+            +tocar()
+            +pausar()
+            +selecionarMusica(String musica)
+        }
 
-    class Phone {
-        +ligar(String numero)
-        +atender()
-        +iniciarCorreioVoz()
-    }
+        class Phone {
+            <<Interface>>
+            +ligar(String numero)
+            +atender()
+            +iniciarCorreioVoz()
+        }
 
-    class WebBrowser {
-        +exibirPagina(String url)
-        +adicionarNovaAba()
-        +atualizarPagina()
-    }
+        class WebBrowser {
+            <<Interface>>
+            +exibirPagina(String url)
+            +adicionarNovaAba()
+            +atualizarPagina()
+        }
 
-    class iPhone {
-    }
+        class iPhone {
+        }
 
-    iPhone ..|> MusicPlayer
-    iPhone ..|> Phone
-    iPhone ..|> WebBrowser
+        iPhone ..|> MusicPlayer
+        iPhone ..|> Phone
+        iPhone ..|> WebBrowser
+```
